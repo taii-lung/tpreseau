@@ -80,6 +80,20 @@ Interface : 192.168.56.1 --- 0xa
 
 ### determiner pour la carte réseau impliquée dans le partage de connexion
 '''
+PS C:\windows\system32> arp -a
+
+Interface : 172.20.10.10 --- 0x8
+  Adresse Internet      Adresse physique      Type
+  172.20.10.1           fe-aa-81-5d-f1-64     dynamique
+  172.20.10.15          ff-ff-ff-ff-ff-ff     statique
+  224.0.0.22            01-00-5e-00-00-16     statique
+  224.0.0.251           01-00-5e-00-00-fb     statique
+  224.0.0.252           01-00-5e-00-00-fc     statique
+  239.255.255.250       01-00-5e-7f-ff-fa     statique
+  255.255.255.255       ff-ff-ff-ff-ff-ff     statique
+
+### prouvez que vous avez bien changé d'IP
+'''
 PS C:\windows\system32> ipconfig
 
 Configuration IP de Windows
@@ -88,12 +102,87 @@ Carte réseau sans fil Wi-Fi :
 
    Suffixe DNS propre à la connexion. . . :
    Adresse IPv6. . . . . . . . . . . . . .: 2a01:cb1a:34:4c89:5068:c933:d922:731f
-   Adresse IPv6 temporaire . . . . . . . .: 2a01:cb1a:34:4c89:d505:f4c2:7a82:9159
+   Adresse IPv6 temporaire . . . . . . . .: 2a01:cb1a:34:4c89:cd1d:abde:8353:f25
    Adresse IPv6 de liaison locale. . . . .: fe80::e8cb:cd94:b7cf:38da%8
-   Adresse IPv4. . . . . . . . . . . . . .: 172.20.10.9
+   Adresse IPv4. . . . . . . . . . . . . .: 172.20.10.10 ### <-- a la place de 172.20.10.9
    Masque de sous-réseau. . . . . . . . . : 255.255.255.240
    Passerelle par défaut. . . . . . . . . : fe80::fcaa:81ff:fe5d:f164%8
                                        172.20.10.1
 '''
+### Pingz !
+'''
+PS C:\windows\system32> ping ynov.com
 
-### 
+Envoi d’une requête 'ping' sur ynov.com [2606:4700:20::681a:ae9] avec 32 octets de données :
+Réponse de 2606:4700:20::681a:ae9 : temps=41 ms
+Réponse de 2606:4700:20::681a:ae9 : temps=70 ms
+Réponse de 2606:4700:20::681a:ae9 : temps=53 ms
+Réponse de 2606:4700:20::681a:ae9 : temps=59 ms
+
+Statistiques Ping pour 2606:4700:20::681a:ae9:
+    Paquets : envoyés = 4, reçus = 4, perdus = 0 (perte 0%),
+Durée approximative des boucles en millisecondes :
+    Minimum = 41ms, Maximum = 70ms, Moyenne = 55ms
+''' 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### vérifiez avec une commande ping que vous avez bien un accès internet
+'''
+PS C:\windows\system32> ipconfig
+
+Configuration IP de Windows
+
+Carte réseau sans fil Wi-Fi :
+
+   Suffixe DNS propre à la connexion. . . :
+   Adresse IPv6. . . . . . . . . . . . . .: 2a01:cb1a:34:4c89:5068:c933:d922:731f
+   Adresse IPv6 temporaire . . . . . . . .: 2a01:cb1a:34:4c89:cd1d:abde:8353:f25
+   Adresse IPv6 de liaison locale. . . . .: fe80::e8cb:cd94:b7cf:38da%8
+   Adresse IPv4. . . . . . . . . . . . . .: 172.20.10.10
+   Masque de sous-réseau. . . . . . . . . : 255.255.255.240
+   Passerelle par défaut. . . . . . . . . : fe80::fcaa:81ff:fe5d:f164%8
+                                       172.20.10.1
+'''
