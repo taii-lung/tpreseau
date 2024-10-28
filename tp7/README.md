@@ -1,5 +1,5 @@
-
-
+# TP7 <3
+## I
 
 ### 🌞 Lister les ports en écoute sur la machine
 '''[wonana@localhost ~]$ sudo ss -ltpn
@@ -17,8 +17,8 @@ LISTEN      0           128                       [::]:22                      [
 Warning: ALREADY_ENABLED: 80:tcp
 success
 '''
-# 🌞 Vérifier que ça a pris effet
-### faites un ping vers sitedefou.tp7.b1
+### 🌞 Vérifier que ça a pris effet
+#### faites un ping vers sitedefou.tp7.b1
 '''tai_lung@serveurw:/$ ping sitedefou.tp7.b1
 PING sitedefou.tp7.b1 (10.7.1.11) 56(84) bytes of data.
 64 bytes from sitedefou.tp7.b1 (10.7.1.11): icmp_seq=1 ttl=64 time=1.76 ms
@@ -31,7 +31,7 @@ PING sitedefou.tp7.b1 (10.7.1.11) 56(84) bytes of data.
 rtt min/avg/max/mdev = 1.756/2.167/2.433/0.250 ms
 '''
 
-### visitez http://sitedefou.tp7.b1
+#### visitez http://sitedefou.tp7.b1
 '''tai_lung@serveurw:/$ curl    sitedefou.tp7.b1
 <html>
 <head><title>403 Forbidden</title></head>
