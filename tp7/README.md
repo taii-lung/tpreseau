@@ -1,5 +1,5 @@
 # TP7 <3
-## I
+## 1
 
 ### 🌞 Lister les ports en écoute sur la machine
 ```
@@ -43,4 +43,13 @@ rtt min/avg/max/mdev = 1.756/2.167/2.433/0.250 ms
 <hr><center>nginx/1.20.1</center>
 </body>
 </html>
+```
+
+## 2
+## A 
+### 🌞 Lister les ports en écoute sur la machine
+```
+[wonana@localhost ~]$ sudo ss -lntp
+State    Recv-Q   Send-Q       Local Address:Port       Peer Address:Port   Process
+LISTEN   0        511              10.7.1.11:443             0.0.0.0:*       users:(("nginx",pid=1448,fd=6),("nginx",pid=1447,fd=6))
 ```
